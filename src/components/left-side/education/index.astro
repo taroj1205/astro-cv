@@ -1,0 +1,31 @@
+---
+import List from "./list.astro"
+
+const courses = [
+  {
+    course: "Computer Science",
+    institute: "University of Auckland",
+    start: "2024",
+    end: "2026",
+  },
+  {
+    course: "IT Management",
+    institute: "University of Auckland",
+    start: "2024",
+    end: "2026",
+  },
+]
+---
+
+<ul class="flex flex-col gap-2 w-full">
+  {
+    courses.map((course) => (
+      <List
+        course={course.course}
+        institute={course.institute}
+        start={course.start}
+        end={course.end}
+      />
+    ))
+  }
+</ul>
