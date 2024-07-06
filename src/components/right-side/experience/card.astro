@@ -1,0 +1,12 @@
+---
+const { role, employer, description, date } = Astro.props
+---
+
+<li>
+  <h3 class="text-xl font-bold">{role}</h3>
+  <div class="flex justify-between">
+    <h4 class="text-lg font-semibold">{employer}</h4>
+    <p>{date}</p>
+  </div>
+  <p>{description}</p>
+</li>

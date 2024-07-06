@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets"
+import { generateSizesAndWidths } from "utils/image"
+import profileImage from "assets/profile.webp"
+import Title from "./title.astro"
+import Contact from "./contact.astro"
+import Education from "./education/index.astro"
+import Skills from "./skills/index.astro"
+---
+
+<div class="col-span-4 flex flex-col items-center gap-5 w-full py-10">
+  <Image
+    src={profileImage}
+    alt="Profile"
+    class="rounded-full w-24 aspect-square"
+    {...generateSizesAndWidths(profileImage.width, profileImage.height)}
+  />
+  <section class="flex flex-col gap-4 items-center w-full">
+    <Title>Contact me</Title>
+    <Contact
+      phone="+64 211 246 111"
+      email="taroj1205@gmail.com"
+      website="https://taroj1205.poyo.jp/"
+    />
+  </section>
+  <section class="flex flex-col gap-4 items-center w-full">
+    <Title>Education</Title>
+    <Education />
+  </section>
+  <section class="flex flex-col gap-4 items-center w-full">
+    <Title>Skills</Title>
+    <Skills />
+  </section>
+</div>

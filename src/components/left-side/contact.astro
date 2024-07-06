@@ -1,0 +1,28 @@
+---
+import EmailIcon from "components/icons/email.astro"
+import PhoneIcon from "components/icons/phone.astro"
+import GlobeIcon from "components/icons/globe.astro"
+const { phone, email, website } = Astro.props
+---
+
+<ul class="flex flex-col gap-2 w-full pl-1">
+  <li class="flex flex-row gap-2">
+    <EmailIcon />
+    <a href={`mailto:${email}`}>
+      {email}
+    </a>
+  </li>
+  <li class="flex flex-row gap-2">
+    <PhoneIcon />
+    <a href={`tel:${phone}`}>
+      {phone}
+    </a>
+  </li>
+
+  <li class="flex flex-row gap-2">
+    <GlobeIcon />
+    <a href={website} target="_blank" rel="noopener noreferrer">
+      {website}
+    </a>
+  </li>
+</ul>

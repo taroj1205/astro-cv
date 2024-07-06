@@ -1,24 +1,26 @@
 ---
-// Component Imports
-import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import LeftSide from "components/left-side/index.astro"
+import RightSide from "components/right-side/index.astro"
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>CV - Shintaro Jokagi</title>
+  </head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
+  <body>
+    <div class="flex items-center justify-center relative">
+      <main class="w-paper h-paper grid grid-cols-12">
+        <LeftSide />
+        <hr
+          class="col-span-1 border-t-0 border-l-2 h-[250mm] inline-block border-gray-700 place-self-center"
+        />
+        <RightSide />
+      </main>
+    </div>
+  </body>
 </html>
