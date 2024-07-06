@@ -1,0 +1,9 @@
+---
+const { course, institute, start, end } = Astro.props
+---
+
+<li class="flex flex-col gap-2 pl-1">
+  <h3 class="text-xl font-semibold">{course}</h3>
+  <p class="text-sm">{institute}</p>
+  <p class="text-sm">{start} - {end}</p>
+</li>
